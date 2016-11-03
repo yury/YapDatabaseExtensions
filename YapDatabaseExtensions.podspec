@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version           = "2.5.0"
   s.summary           = "Helpers for using value types with YapDatabase."
   s.description       = <<-DESC
-  
+
   Defines APIs to conveniently read, write and remove objects and values
   to or from YapDatabse. See ValueCoding for value type support.
 
@@ -21,22 +21,10 @@ Pod::Spec.new do |s|
 
   s.dependency 'ValueCoding', '~> 1.3'
   s.dependency 'YapDatabase', '~> 2'
-  
-  s.subspec 'Core' do |ss|
-    ss.source_files = [
-      'YapDatabaseExtensions/Shared/YapDatabaseExtensions.swift',
-      'YapDatabaseExtensions/Shared/YapDB.swift'      
-    ]
-  end
-  
-  s.subspec 'Functional' do |ss|
-    ss.dependency 'YapDatabaseExtensions/Core'
-    ss.source_files = 'YapDatabaseExtensions/Shared/Functional/*.swift'
-  end
 
-  s.subspec 'Persitable' do |ss|
-    ss.dependency 'YapDatabaseExtensions/Functional'
-    ss.source_files = 'YapDatabaseExtensions/Shared/Persistable/*.swift'
-  end
+  s.source_files = [
+    'Sources/*.swift'
+  ]
+
 end
 
