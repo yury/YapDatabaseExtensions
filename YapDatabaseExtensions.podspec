@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.module_name       = 'YapDatabaseExtensions'
   s.social_media_url  = 'https://twitter.com/danthorpe'
   s.requires_arc      = true
-  s.default_subspec   = 'Persitable'
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
 
